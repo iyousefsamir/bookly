@@ -33,11 +33,8 @@ class BookDetialsViewBody extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 6),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * .29),
-              child: BookRating(),
-            ),
+            const SizedBox(height: 18),
+            const BookRating(mainAxisAlignment: MainAxisAlignment.center),
           ],
         ),
       ),
