@@ -12,7 +12,9 @@ class DetailsBooksSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .21),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imageUrl: 'https://placehold.co/150x220/png?text=No+Cover',
+          ),
         ),
         const SizedBox(height: 33),
         Text('The Jungle Book', style: Styles.textstyle30),
