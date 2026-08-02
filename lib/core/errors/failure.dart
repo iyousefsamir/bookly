@@ -40,6 +40,10 @@ class ServerFailure extends Failure {
   }
 
   factory ServerFailure.fromResponse(int statusCode, dynamic response) {
+    if (response['error'] != null && response['error']['message'] != null) {
+      return ServerFailure(response['error']['message']);
+    }
+
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return ServerFailure(response['error']['message']);
     } else if (statusCode == 404) {
