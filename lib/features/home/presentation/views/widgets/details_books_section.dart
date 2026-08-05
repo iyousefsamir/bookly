@@ -12,7 +12,7 @@ class DetailsBooksSection extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .21),
+          padding: EdgeInsets.symmetric(horizontal: width * .22),
           child: CustomBookImage(
             imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
           ),
@@ -21,7 +21,7 @@ class DetailsBooksSection extends StatelessWidget {
         Text(
           bookModel.volumeInfo.title!,
           textAlign: TextAlign.center,
-          style: Styles.textstyle30,
+          style: Styles.textstyle25,
         ),
         const SizedBox(height: 6),
         Opacity(
