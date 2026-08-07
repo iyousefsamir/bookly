@@ -26,8 +26,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        enabledBorder: BuildOutlineInputBorder(),
-        focusedBorder: BuildOutlineInputBorder(),
+        enabledBorder: buildOutlineInputBorder(),
+        focusedBorder: buildOutlineInputBorder(),
         hintText: 'Search',
         suffixIcon: IconButton(
           onPressed: () {
@@ -46,7 +46,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     );
   }
 
-  OutlineInputBorder BuildOutlineInputBorder() {
+  OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
       borderSide: BorderSide(color: Colors.white),

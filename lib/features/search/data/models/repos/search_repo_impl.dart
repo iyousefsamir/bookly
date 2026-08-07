@@ -16,12 +16,10 @@ class SearchRepoImpl implements SearchRepo {
     required String bookName,
   }) async {
     try {
-      print('Search: $bookName');
       var data = await apiService.get(
         endpoint:
             'volumes?filter=free-ebooks&q=$bookName&key=AIzaSyAeijT38HZXJ1E-pdujo1FUoZ10RO8aXNY',
       );
-      print(data);
 
       List<BookModel> books = [];
 
